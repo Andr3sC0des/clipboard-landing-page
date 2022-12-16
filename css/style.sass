@@ -1,0 +1,363 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;700&display=swap')
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css")
+
+//// colors
+
+////// primary
+
+$strong-cyan: hsl(171, 66%, 44%)
+$light-blue: hsl(233, 100%, 69%)
+
+////// neutral
+
+$dark-grayish-blue: hsl(210, 10%, 33%)
+$grayish-blue: hsl(201, 11%, 66%)
+
+//// typography
+
+////// body copy
+
+$font-size: 18px
+
+////// fonts
+
+$family: 'Bai Jamjuree', sans-serif // 400, 600
+
+
+*
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+
+html
+    font-size: $font-size
+
+body
+    font-family: $family
+
+.cyan
+    background: $strong-cyan
+.blue
+    background: $light-blue
+
+$paragraph-color: $grayish-blue
+$title-color: $dark-grayish-blue
+
+.header
+    background: url("../images/bg-header-desktop.png")
+    background-repeat: no-repeat
+    width: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+    padding: 7rem
+    &__title
+        margin-top: 3rem
+        max-width: 34rem
+        color: $title-color
+    &__paragraph
+        line-height: 1.5rem
+        max-width: 34rem
+        margin-top: 1rem
+        text-align: center
+        color: $paragraph-color
+    &__buttons
+        display: flex
+        justify-content: space-around
+        align-items: center
+        width: 400px
+        margin-top: 2rem
+    &__btn
+        padding: 0.8rem 1rem
+        display: block
+        text-decoration: none
+        color: #fff
+        border-radius: 2rem
+        &:hover
+            opacity: 0.7
+
+.snippets
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+    &__title
+        text-align: center
+        color: $title-color
+        max-width: 34rem
+    &__paragraph
+        line-height: 1.5rem
+        margin-top: 1rem
+        text-align: center
+        color: $paragraph-color
+        max-width: 34rem
+
+    &__image
+        width: 70%
+        display: block
+    &__section
+        margin-top: 4rem
+        display: flex
+        justify-content: center
+        align-items: center
+    &__details
+        padding: 4rem
+        display: flex
+        justify-content: center
+        flex-direction: column
+        gap: 2rem
+    &__card
+        &title
+            color: $title-color
+        &paragraph
+            line-height: 1.5rem
+            color: $paragraph-color
+            margin-top: 1rem
+            max-width: 30rem
+
+.access
+    margin-top: 6rem
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+    &__title
+        color: $title-color
+    &__paragraph
+        max-width: 32rem
+        text-align: center
+        line-height: 1.5rem
+        color: $paragraph-color
+        margin-top: 1rem
+    &__image
+        margin-top: 5rem
+        width: 70%
+        display: block
+
+.workflow
+    margin-top: 5rem
+    display: flex
+    justify-content: center
+    flex-direction: column
+    align-items: center
+    &__title
+        color: $title-color
+        text-align: center
+    &__paragraph
+        text-align: center
+        margin-top: 1rem
+        line-height: 1.5rem
+        color: $paragraph-color
+    &__article
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr
+        justify-content: center
+        align-items: center
+        padding: 5rem
+        gap: 2rem
+    &__card
+        height: 300px
+        &image
+            margin: auto
+            display: block
+            align-self: center
+        &title
+            text-align: center
+            margin-top: 2rem
+            color: $title-color
+        &paragraph
+            margin-top: 1rem
+            color: $paragraph-color
+            line-height: 1.5rem
+            text-align: center
+            max-width: 20rem
+.marks
+    display: flex
+    gap: 5rem
+    justify-content: center
+    align-items: center
+    flex-wrap: wrap
+
+.devices
+    margin-top: 6rem
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+    &__title
+        color: $title-color
+    &__paragraph
+        margin-top: 1rem
+        color: $paragraph-color
+        line-height: 1.5rem
+        text-align: center
+        max-width: 32rem
+    &__devices__buttons
+        display: flex
+        width: 400px
+    &__btn
+        color: #fff
+        text-decoration: none
+        padding: 0.8rem 1rem
+        display: block
+
+.footer
+    padding: 2rem 5rem
+    margin-top: 5rem
+    display: flex
+    justify-content: space-between
+    align-items: center
+    background: #f5f6f8
+    &__article
+        display: flex
+        justify-self: center
+        align-items: center
+        gap: 1rem
+    &__links
+        display: grid
+        justify-content: justify
+        align-items: center
+        grid-template-columns: 1fr 1fr 1fr
+    &__link
+        text-decoration: none
+        color: $title-color
+        padding: 1rem
+        &:hover
+            color: $strong-cyan
+    &__social
+        display: flex
+        justify-content: center
+        align-items: center
+        gap: 1rem
+        &> i
+            font-size: 1.5rem
+            color: $title-color
+
+
+@media screen and (max-width: 925px)
+    html
+        font-size: 20px
+    .header
+        padding: 2rem
+        &__logo
+            margin-top: 5rem
+        &__title
+            text-align: center
+        &__paragraph
+            margin-top: 2rem
+        &__buttons
+            flex-direction: column
+            gap: 2rem
+            width: 100%
+        &__btn
+            text-align: center
+    .snippets
+        margin-top: 5rem
+        padding: 2rem
+        &__title
+        &__paragraph
+            margin-top: 2rem
+        &__image
+            width: 100%
+        &__section
+            flex-direction: column
+        &__details
+            margin-top: 2rem
+            padding: 1rem
+            text-align: center
+        &__card
+            &title
+                font-size: 1.4rem
+                font-weight: 400
+
+    .access
+        padding: 2rem
+        text-align: center
+        &__image
+            width: 100%
+            margin-top: 2rem
+
+    .workflow
+        padding: 2rem
+        &__article
+            margin-top: 3rem
+            grid-template-columns: 1fr
+            gap: 3rem
+            padding: 0rem
+        &__card
+            height: fit-content
+            max-width: 100%
+
+    .marks
+        margin-top: 2rem
+        flex-direction: column
+    .devices
+        padding: 2rem
+        text-align: center
+    .footer
+        padding: 2rem
+        flex-direction: column
+        &__logo
+            width: 30%
+        &__article
+            flex-direction: column
+        &__social
+            margin-top: 2rem
+            gap: 2.5rem
+        &__links
+            text-align: center
+            grid-template-columns: 1fr
+
+
+.flag
+    display: flex
+    justify-content: center
+    align-items: center
+    color: #fff
+    width: 300px
+    height: 0px
+    background: #2e2e2e
+    position: absolute
+    top: 0
+    left: 50%
+    transform: translateX(-50%)
+    border-bottom-right-radius: 30px
+    border-bottom-left-radius: 30px
+    transition: 1s
+    opacity: 0
+    pointer-events: none
+    overflow: hidden
+    &__button
+        width: 40px
+        height: 25px
+        background: #2e2e2e
+        position: absolute
+        top: 0
+        left: 50%
+        transform: translateX(-50%)
+        border-bottom-right-radius: 30px
+        border-bottom-left-radius: 30px
+        display: flex
+        justify-content: center
+        align-items: center
+        color: #fff
+        cursor: pointer         
+        &> span
+            align-self: center
+            font-size: 20px
+    &__attribution
+        color: #fff 
+        text-decoration: none
+        font-size: 16px
+        &> a
+            color: #00db6e
+            &:visited
+                color: #03f1f1           
+    &__check
+        &:checked
+            & ~ .flag
+                pointer-events: auto
+                height: 70px
+                opacity: 1
+                transition: height 1s
